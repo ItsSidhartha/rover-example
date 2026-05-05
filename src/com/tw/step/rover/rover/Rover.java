@@ -56,6 +56,6 @@ public class Rover {
 
     @Override
     public String toString() {
-        return coordinate.toString() + " " + heading.toString() + " " + roverState;
+        return coordinate.toString() + " " + heading.toString() + roverState;
     }
 }
