@@ -20,7 +20,7 @@ public class RoverSystemScanner {
         return this.tokens[this.currentIndex];
     }
 
-    private boolean isDone() {
+    boolean isDone() {
         return this.currentIndex >= this.tokens.length;
     }
 
@@ -55,5 +55,9 @@ public class RoverSystemScanner {
         Coordinate bottonLeft = new Coordinate(0, 0);
         Coordinate topRight = scanCoordinate();
         return new Plateau(bottonLeft, topRight);
+    }
+
+    public String scanId() {
+        return  consume().substring(0, 2);
     }
 }
