@@ -20,6 +20,6 @@ class AppTest {
             System.setOut(originalOut);
         }
 
-        assertEquals("0 5 W Dead" + System.lineSeparator(), output.toString());
+        assertEquals("{R2=5 3 E Dead, R1=3 4 E}" + System.lineSeparator(), output.toString());
     }
 }
