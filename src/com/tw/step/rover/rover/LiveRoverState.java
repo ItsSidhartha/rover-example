@@ -27,11 +27,14 @@ public class LiveRoverState implements RoverState {
     public RoverState move(Navigator navigator, Boundary boundary) {
         Coordinate nextCoordinate = rover.getNextCoordinateInternal(navigator);
         if(!rover.isWithin(boundary)) {
-            DeadRoverState deadRoverState = new DeadRoverState(rover);
-            return deadRoverState;
+            return new DeadRoverState(rover);
         }
         rover.setCoordinate(nextCoordinate);
         return this;
     }
 
+    @Override
+    public String toString() {
+        return "";
+    }
 }
